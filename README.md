@@ -42,7 +42,21 @@ Invoking the Gradle Wrapper on Windows:
 
 _NOTE:  For the sake of brevity, the remaining examples in this document are *nix-only._
 
-### How To Install Tomcat
+### How To See a Complete List of Gradle Tasks
+
+You can view a comprehensive list of Gradle tasks with short descriptions of their purposes by running the following:
+
+```
+    $ ./gradlew tasks
+```
+
+
+### How To xxx
+### How To xxx
+### How To xxx
+### How To xxx
+### How To xxx
+### How To xxx
 
 
 
