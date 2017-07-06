@@ -27,9 +27,9 @@ not sufficient!_
 
 **WARNING!** _Always use Git_ to obtain a copy of uPortal-start.  (Please ignore the _Download ZIP_
 option provided by GitHub.)  The uPortal Developer Community makes improvements to uPortal-start
-every week:  new features, bug fixes, performance enhancements, documentation additions, _&c._  It
-is extremely important to be able to update your local copy of uPortal-start and (thereby) benefit
-from these contributions.
+every week:  new features, bug fixes, performance enhancements, additions to documentation, _&c._
+It is extremely important to be able to update your local copy of uPortal-start and (thereby)
+benefit from these contributions.
 
 ### uPortal 5.0 Manual
 
