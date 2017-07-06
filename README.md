@@ -61,9 +61,7 @@ Invoking the Gradle Wrapper on Windows:
 
 _NOTE:  For the sake of brevity, the remaining examples in this document are *nix-only._
 
-#### How To See a Complete List of Gradle Tasks
-
-You can view a comprehensive list of Gradle tasks with short descriptions of their purposes by
+You can view a comprehensive list of Gradle tasks -- with short descriptions of what they do -- by
 running the following command:
 
 ```
