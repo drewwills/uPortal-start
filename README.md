@@ -2,11 +2,30 @@
 
 [![Linux Build Status](https://travis-ci.org/Jasig/uPortal-start.svg?branch=master)](https://travis-ci.org/Jasig/uPortal-start)
 
-## User Guide
+## About uPortal-start
 
-### Using Gradle
+uPortal-start is the mechanism through which individuals and institutions adopt [Apereo uPortal][],
+the leading open source enterprise portal framework built by and for higher education institutions,
+K-12 schools and research communities.  **uPortal-start is new for uPortal 5.0**
 
-`uPortal-start` provides a build system and several CLI tools through Gradle, and it comes with a
+uPortal-start help you manage:
+
+  - Your uPortal configuration
+  - Your uPortal skin
+  - Your uPortal data
+  - And your uPortal deployments through an integrated suite of CLI tools
+
+### uPortal 5.0 Manual
+
+This `README` provides some high-level information on the uPortal-start component, plus some how-to
+examples of performing many of the most common tasks.  The complete uPortal 5.0 Manual is hosted in
+GitHUb Pages.
+
+  - [uPortal 5.0 Manual][]
+
+## Using uPortal-start
+
+uPortal-start provides a build system and several CLI tools through Gradle, and it even comes with a
 _Gradle Wrapper_ so you don't have to install Gradle to use it.
 
 Invoking the Gradle Wrapper on *nix:
@@ -20,6 +39,29 @@ Invoking the Gradle Wrapper on Windows:
 ```
     > gradlew.bat {taskname} [{taskname}...]
 ```
+
+_NOTE:  For the sake of brevity, the remaining examples in this document are *nix-only._
+
+### How To Install Tomcat
+
+
+
+
+
+[Apereo uPortal]: https://www.apereo.org/projects/uportal
+[uPortal 5.0 Manual]: https://jasig.github.io/uPortal
+
+
+
+
+
+
+
+
+
+
+
+
 
 #### HSQL (Database) Tasks
 
