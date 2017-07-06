@@ -129,8 +129,8 @@ the `overlays` folder.
 uPortal-start provides several Command Line Interface (CLI) tools that allow you to manage the
 portal database.  The most important of these is the `dataInit` task.
 
-Use the following command to create the database schema and fill it with _base portal data_ and
-your _implementation data set_:
+Use the following command to create the database schema and fill it with _base portal data_ as well
+as your _implementation data set_:
 
 ```
     $ ./gradlew dataInit
