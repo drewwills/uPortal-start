@@ -15,6 +15,22 @@ uPortal-start help you manage:
   - Your uPortal data
   - And your uPortal deployments through an integrated suite of CLI tools
 
+### Prerequisites
+
+The following software packages are required for working with uPortal-start:
+
+  - The [Java Development Kit][] (JDk)
+  - A suitable [Git Client][] for your OS
+
+Download and install the **latest JDK 8 release**.  Make sure you select the full JDK;  a JRE is
+not sufficient.
+
+**WARNING!** _Always use Git_ to obtain a copy of uPortal-start.  _Please ignore the Download ZIP
+option_ provided by GitHub.  The uPortal Developer Community makes improvements to uPortal-start
+every week:  new features, bug fixes, performance enhancements, documentation additions, _&c._  It
+is extremely important to be able to update your local copy of uPortal-start and (thereby) benefit
+from these contributions.
+
 ### uPortal 5.0 Manual
 
 This `README` provides some high-level information on the uPortal-start component, plus some how-to
@@ -124,55 +140,32 @@ your _implementation data set_:
 
 **WARNING!**  This command also _drops the existing database schema_ (beforehand) if necessary.
 You probably want to perform this task against the production portal database exactly one time (in
-the beginning).
+the beginning).  In the case of non-production deployments, however, using `dataInit` for a full
+"database reset" is fairly common.
 
+### How To Start Tomcat
 
+Once you have deployed uPortal technology, you will need to start the Tomcat server before you can
+see your portal working.  You can do that with the following command:
 
-### How To xxx
-### How To xxx
+```
+    $ ./gradlew tomcatStart
+```
 
+**WARNING!**  It is safest to run Gradle tasks in uPortal-start _only when Tomcat is not running_.
+This provision applies to tasks that build and deploy uPortal technology, as well as tasks that
+manipulate the portal database.
 
+You can stop the Tomcat server using with this command:
 
-
+```
+    $ ./gradlew tomcatStop
+```
 
 [Apereo uPortal]: https://www.apereo.org/projects/uportal
 [uPortal 5.0 Manual]: https://jasig.github.io/uPortal
+[Java Development Kit]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+[Git Client]: https://git-scm.com/downloads
 [Apache Tomcat Servlet Container]: https://tomcat.apache.org/
 [Maven Central]: https://search.maven.org/
 [HSQLDB]: http://hsqldb.org/
-
-
-
-
-
-
-
-
-
-
-
-#### HSQL (Database) Tasks
-
-- **hsqlStart**:  Starts the embedded HSQLDB uPortal database, which is used in _local development
-environments_
-- **hsqlStop**:  Stops the embedded HSQLDB uPortal database
-
-#### Tomcat (Web Server) Tasks
-
-- **tomcatInstall**:  Downloads the Apache Tomcat servlet container and performs the necessary
-configuration steps, cleaning up the previous installation if necessary
-- **tomcatStart**:  Starts the embedded Tomcat servlet container
-- **tomcatStop**:  Stops the embedded Tomcat servlet container
-- **tomcatClearLogs**:  Deletes all files and sub folders in the Tomcat logs directory (not
-recommended for server deployments)
-
-#### Data (Import/Export) Tasks
-
-- **dataInit**:  Drops and recreates the schema in the embedded HSQLDB uPortal database, then loads
-both the Base Data Set and the Implementation Data Set
-- **dataImport**:  Imports the specified entity file(s) into the embedded HSQLDB uPortal database;
-please specify exactly one of -Dfile={path}, -Ddir={path}, -Dmanifest={path}, or -Darchive={path}
-
-#### Miscellaneous Tasks
-
-- **portalClean**:  Deletes the deployed `/uPortal` webapp in Tomcat
