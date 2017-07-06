@@ -22,8 +22,8 @@ The following software packages are required for working with uPortal-start:
   - A [Java Development Kit][] (JDk)
   - A suitable [Git Client][] for your OS
 
-Download and install the **latest JDK 8 release**.  Make sure you select the full JDK;  a JRE is
-not sufficient.
+Download and install the **latest JDK 8 release**.  Make sure you select the full JDK;  _a JRE is
+not sufficient!_
 
 **WARNING!** _Always use Git_ to obtain a copy of uPortal-start.  _Please ignore the Download ZIP
 option_ provided by GitHub.  The uPortal Developer Community makes improvements to uPortal-start
