@@ -76,7 +76,7 @@ by uPortal-start.
 uPortal-start also comes pre-integrated with a Relational Database Management System (RDBMS) called
 [HSQLDB][].  A supported RDBMS instance is another uPortal requirement.  For uPortal server
 deployments, you will want to choose a different RDBMS platform:  most likely Oracle, MS SQL
-Server, MySQL, or PostgreSQL.  The integrated HSQLDB instance, however, is very suitable for local
+Server, MySQL, or PostgreSQL.  The integrated HSQLDB instance, however, is recommended for local
 dev environments of uPortal.
 
 Use the following command to start the embedded HSQLDB instance:
@@ -95,17 +95,39 @@ You can stop the HSQLDB instance with the following command:
     $ ./gradlew hsqlStop
 ```
 
+### How To Deploy uPortal Technology to Tomcat
+
+When(ever) you perform the `tomcatInstall` task, the Tomcat container will be empty.  You need to
+build your uPortal application software and deploy it to Tomcat before you will be able to see it
+working.
+
+You can do that with the following command:
+
+```
+    $ ./gradlew portalDeploy
+```
+
+**NOTE:**  you will need to _run this command again_ any time you make changes to anything inside
+the `overlays` folder.
+
+### How To Create and Initialize the Database Schema
+
+uPortal-start provides several Command Line Interface (CLI) tools that allow you to manage the
+portal database.  The most important of these is the `dataInit` task.
+
+Use the following command to create the database schema and fill it with _base portal data_ and
+your _implementation data set_:
+
+```
+    $ ./gradlew dataInit
+```
+
+**WARNING!**  This command also _drops the existing database schema_ (beforehand) if necessary.
+You probably want to perform this task against the production portal database exactly one time (in
+the beginning).
 
 
 
-
-
-
-
-
-
-### How To xxx
-### How To xxx
 ### How To xxx
 ### How To xxx
 
