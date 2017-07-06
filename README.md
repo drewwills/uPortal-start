@@ -23,6 +23,9 @@ GitHUb Pages.
 
   - [uPortal 5.0 Manual][]
 
+As far as possible, **the examples in this `README` are presented in the order in which you will
+want to perform them** when you set up a local uPortal dev environment.
+
 ## Using uPortal-start
 
 uPortal-start provides a build system and several CLI tools through Gradle, and it even comes with a
@@ -44,14 +47,23 @@ _NOTE:  For the sake of brevity, the remaining examples in this document are *ni
 
 ### How To See a Complete List of Gradle Tasks
 
-You can view a comprehensive list of Gradle tasks with short descriptions of their purposes by running the following:
+You can view a comprehensive list of Gradle tasks with short descriptions of their purposes by
+running the following command:
 
 ```
     $ ./gradlew tasks
 ```
 
+### How To Install Tomcat
 
-### How To xxx
+uPortal-start comes pre-integrated with the [Apache Tomcat Servlet Container][], which is a
+requirement for running uPortal.  Several Tomcat configuration steps must be performed, moreover,
+before the uPortal application software will function properly within it.  uPortal-start handles
+these configuration tasks for you.
+
+You can download (from [Maven Central][]), install, and properly configure
+
+
 ### How To xxx
 ### How To xxx
 ### How To xxx
@@ -64,7 +76,8 @@ You can view a comprehensive list of Gradle tasks with short descriptions of the
 
 [Apereo uPortal]: https://www.apereo.org/projects/uportal
 [uPortal 5.0 Manual]: https://jasig.github.io/uPortal
-
+[Apache Tomcat Servlet Container]: https://tomcat.apache.org/
+[Maven Central]: https://search.maven.org/
 
 
 
