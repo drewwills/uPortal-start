@@ -1,3 +1,14 @@
+<style>
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+</style>
+
 ![uPortal logo](docs/images/uPortal-logo.jpg)
 
 [![Linux Build Status](https://travis-ci.org/Jasig/uPortal-start.svg?branch=master)](https://travis-ci.org/Jasig/uPortal-start)
@@ -50,7 +61,7 @@ _Gradle Wrapper_ so you don't have to install Gradle to use it.
 Invoking the Gradle Wrapper on \*nix:
 
 ```
-    $ ./gradlew {taskname} [{taskname}...]
+    <span class="unselectable">$</span> ./gradlew {taskname} [{taskname}...]
 ```
 
 Invoking the Gradle Wrapper on Windows:
@@ -65,7 +76,7 @@ You can view a comprehensive list of Gradle tasks -- with short descriptions of 
 running the following command:
 
 ```
-    $ ./gradlew tasks
+    <span class="unselectable">$</span> ./gradlew tasks
 ```
 
 ### How To Install Tomcat
@@ -79,7 +90,7 @@ You can download (from [Maven Central][]), install, and properly configure an ap
 container by running the following command:
 
 ```
-    $ ./gradlew tomcatInstall
+    <span class="unselectable">$</span> ./gradlew tomcatInstall
 ```
 
 You can run this command again at any time to reset your Tomcat container to the defaults defined
@@ -96,7 +107,7 @@ dev environments of uPortal.
 Use the following command to start the embedded HSQLDB instance:
 
 ```
-    $ ./gradlew hsqlStart
+    <span class="unselectable">$</span> ./gradlew hsqlStart
 ```
 
 :notebook:  the database must be running at all times when uPortal is running, and it also must be
@@ -106,7 +117,7 @@ customary to leave HSQLDB running all day, or as long as you're actively working
 You can stop the HSQLDB instance with the following command:
 
 ```
-    $ ./gradlew hsqlStop
+    <span class="unselectable">$</span> ./gradlew hsqlStop
 ```
 
 ### How To Deploy uPortal Technology to Tomcat
@@ -118,7 +129,7 @@ working.
 You can do that with the following command:
 
 ```
-    $ ./gradlew portalDeploy
+    <span class="unselectable">$</span> ./gradlew portalDeploy
 ```
 
 :notebook:  you will need to _run this command again_ any time you make changes to anything inside
@@ -133,7 +144,7 @@ Use the following command to create the database schema and fill it with _base p
 as your _implementation data set_:
 
 ```
-    $ ./gradlew dataInit
+    <span class="unselectable">$</span> ./gradlew dataInit
 ```
 
 :warning:  This command also _drops the existing database schema_ (beforehand) if necessary.
@@ -147,7 +158,7 @@ Once you have deployed uPortal technology, you will need to start the Tomcat ser
 see your portal working.  You can do that with the following command:
 
 ```
-    $ ./gradlew tomcatStart
+    <span class="unselectable">$</span> ./gradlew tomcatStart
 ```
 
 :warning:  It is safest to run Gradle tasks in uPortal-start _only when Tomcat is not running_.
@@ -157,7 +168,7 @@ manipulate the portal database.
 You can stop the Tomcat server using with this command:
 
 ```
-    $ ./gradlew tomcatStop
+    <span class="unselectable">$</span> ./gradlew tomcatStop
 ```
 
 [Apereo uPortal]: https://www.apereo.org/projects/uportal
