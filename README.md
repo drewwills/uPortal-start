@@ -45,7 +45,7 @@ Invoking the Gradle Wrapper on Windows:
 
 _NOTE:  For the sake of brevity, the remaining examples in this document are *nix-only._
 
-### How To See a Complete List of Gradle Tasks
+#### How To See a Complete List of Gradle Tasks
 
 You can view a comprehensive list of Gradle tasks with short descriptions of their purposes by
 running the following command:
@@ -61,10 +61,49 @@ requirement for running uPortal.  Several Tomcat configuration steps must be per
 before the uPortal application software will function properly within it.  uPortal-start handles
 these configuration tasks for you.
 
-You can download (from [Maven Central][]), install, and properly configure
+You can download (from [Maven Central][]), install, and properly configure an appropriate Tomcat
+container by running the following command:
+
+```
+    $ ./gradlew tomcatInstall
+```
+
+You can run this command again at any time to reset your Tomcat container to the defaults defined
+by uPortal-start.
+
+### How To Start the Embedded Database
+
+uPortal-start also comes pre-integrated with a Relational Database Management System (RDBMS) called
+[HSQLDB][].  A supported RDBMS instance is another uPortal requirement.  For uPortal server
+deployments, you will want to choose a different RDBMS platform:  most likely Oracle, MS SQL
+Server, MySQL, or PostgreSQL.  The integrated HSQLDB instance, however, is very suitable for local
+dev environments of uPortal.
+
+Use the following command to start the embedded HSQLDB instance:
+
+```
+    $ ./gradlew hsqlStart
+```
+
+**NOTE:**  the database must be running at all times when uPortal is running, and it also must be
+running whenever several of the Import/Export tools are invoked.  (See examples below.)  It is
+customary to leave HSQLDB running all day, or as long as you're actively working on uPortal.
+
+You can stop the HSQLDB instance with the following command:
+
+```
+    $ ./gradlew hsqlStop
+```
 
 
-### How To xxx
+
+
+
+
+
+
+
+
 ### How To xxx
 ### How To xxx
 ### How To xxx
@@ -78,7 +117,7 @@ You can download (from [Maven Central][]), install, and properly configure
 [uPortal 5.0 Manual]: https://jasig.github.io/uPortal
 [Apache Tomcat Servlet Container]: https://tomcat.apache.org/
 [Maven Central]: https://search.maven.org/
-
+[HSQLDB]: http://hsqldb.org/
 
 
 
