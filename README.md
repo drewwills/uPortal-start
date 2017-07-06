@@ -19,7 +19,7 @@ uPortal-start help you manage:
 
 The following software packages are required for working with uPortal-start:
 
-  - The [Java Development Kit][] (JDk)
+  - A [Java Development Kit][] (JDk)
   - A suitable [Git Client][] for your OS
 
 Download and install the **latest JDK 8 release**.  Make sure you select the full JDK;  a JRE is
