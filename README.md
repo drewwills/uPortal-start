@@ -156,7 +156,7 @@ manipulate the portal database.
 
 You can stop the Tomcat server using with this command:
 
-```ShellSession
+```console
     ./gradlew tomcatStop
 ```
 
