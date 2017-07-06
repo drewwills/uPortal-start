@@ -6,7 +6,7 @@
 
 uPortal-start is the mechanism through which individuals and institutions adopt [Apereo uPortal][],
 the leading open source enterprise portal framework built by and for higher education institutions,
-K-12 schools and research communities.  **uPortal-start is new for uPortal 5.0**
+K-12 schools, and research communities.  **uPortal-start is new for uPortal 5.0**
 
 uPortal-start help you manage:
 
